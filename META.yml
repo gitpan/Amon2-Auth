@@ -1,0 +1,35 @@
+---
+abstract: ~
+author:
+  - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.96
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 1.02'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Amon2-Auth
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+requires:
+  Amon2: 3.03
+  Hash::MultiValue: 0.1
+  JSON: 2.53
+  LWP: 6.00
+  LWP::Protocol::https: 6.00
+  Mouse: 0.97
+  Net::Twitter::Lite: 0.10004
+  Plack: 0.9984
+  URI::Escape: 0
+  perl: 5.8.1
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01
