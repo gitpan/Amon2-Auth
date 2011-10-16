@@ -2,7 +2,7 @@ package Amon2::Auth;
 use strict;
 use warnings;
 use 5.008001;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 1;
 __END__
@@ -11,15 +11,13 @@ __END__
 
 =head1 NAME
 
-Amon2::Auth -
-
-=head1 SYNOPSIS
-
-  use Amon2::Auth;
+Amon2::Auth - Authentication module for Amon2
 
 =head1 DESCRIPTION
 
-Amon2::Auth is
+Amon2::Auth is authentication modules for Amon2.
+
+Please read L<Amon2::Plugin::Web::Auth> for more details.
 
 =head1 AUTHOR
 
