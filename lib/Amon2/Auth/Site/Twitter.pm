@@ -46,10 +46,20 @@ sub callback {
 	my $nt = $self->_nt();
 	$nt->request_token($cookie->[0]);
 	$nt->request_token_secret($cookie->[1]);
+    if (my $denied = $c->req->param('denied')) {
+        return $callback->{on_error}->("Access denied");
+    }
 	my $verifier = $c->req->param('oauth_verifier');
-	my ($access_token, $access_token_secret, $user_id, $screen_name) =
-		$nt->request_access_token(verifier => $verifier);
-	return $callback->{on_finished}->($access_token, $access_token_secret, $user_id, $screen_name);
+    my ($access_token, $access_token_secret, $user_id, $screen_name) = eval {
+        $nt->request_access_token(verifier => $verifier);
+    };
+    if ($@) {
+        # Net::Twitter::Lite throws exception like following
+        # GET https://twitter.com/oauth/access_token failed: 401 Unauthorized at /Users/tokuhirom/perl5/perlbrew/perls/perl-5.15.2/lib/site_perl/5.15.2/Net/Twitter/Lite.pm line 237.
+		return $callback->{on_error}->($@);
+    } else {
+        return $callback->{on_finished}->($access_token, $access_token_secret, $user_id, $screen_name);
+    }
 }
 
 1;
@@ -91,11 +101,11 @@ This is a twitter authentication module for Amon2. You can call a twitter APIs w
 
 =over 4
 
-=item $auth->auth_uri($c:Amon2::Web, $callback_uri : Str) :Str
+=item C<< $auth->auth_uri($c:Amon2::Web, $callback_uri : Str) :Str >>
 
 Get a authenticate URI.
 
-=item $auth->callback($c:Amon2::Web, $callback:HashRef) : Plack::Response
+=item C<< $auth->callback($c:Amon2::Web, $callback:HashRef) : Plack::Response >>
 
 Process the authentication callback dispatching.
 

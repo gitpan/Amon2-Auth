@@ -9,7 +9,7 @@ use Amon2::Auth;
 use LWP::UserAgent;
 use JSON;
 use Amon2::Auth::Util qw(parse_content);
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 sub moniker { 'loctouch' }
 
@@ -150,11 +150,11 @@ You can replace instance of L<LWP::UserAgent>.
 
 =over 4
 
-=item $auth->auth_uri($c:Amon2::Web, $callback_uri : Str) :Str
+=item C<< $auth->auth_uri($c:Amon2::Web, $callback_uri : Str) :Str >>
 
 Get a authenticate URI.
 
-=item $auth->callback($c:Amon2::Web, $callback:HashRef) : Plack::Response
+=item C<< $auth->callback($c:Amon2::Web, $callback:HashRef) : Plack::Response >>
 
 Process the authentication callback dispatching.
 
