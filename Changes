@@ -1,15 +1,28 @@
-Revision history for Perl extension Amon2::Plugin::Auth
+Revision history for Perl module Amon2::Plugin::Auth
+
+0.04 2014-05-04T23:49:06Z
+
+    commit 90629cc8584f593c28dd9a3e31ec715e11c887f1
+    Author: Kenta Kase <kesin1202000@gmail.com>
+    Date:   Sun May 4 16:53:15 2014 +0900
+
+        Support Twitter API v1.1
+
+        Change Net::Twitter::Lite to Net::Twitter::Lite::WithAPIv1_1
 
 0.03 2013-04-24T06:11:16Z
 
-    - Site::Twitter: catch exception from Net::Twitter::Lite and rethrow it to callback function
+    - Site::Twitter: catch exception from Net::Twitter::Lite and
+      rethrow it to callback function
       (tokuhirom)
-    - Site::Twitter: handle "Access denied" error (such as "Return to App" on the Deny and Cancel screens)
-      (Takumi Akiyama)
+    - Site::Twitter: handle "Access denied" error
+      (such as "Return to App" on the Deny and Cancel screens)
+        (Takumi Akiyama)
 
-0.02
+0.02 2011-10-15
 
     - docs
 
-0.01    Wed Oct 12 06:32:46 2011
-        - original version
+0.01 2011-10-13
+
+    - original version

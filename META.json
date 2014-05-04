@@ -4,8 +4,10 @@
       "Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.0.56",
-   "license" : "perl_5",
+   "generated_by" : "Minilla/v0.15.1",
+   "license" : [
+      "perl_5"
+   ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
@@ -19,7 +21,8 @@
          "share",
          "eg",
          "examples",
-         "author"
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
@@ -33,9 +36,10 @@
       "develop" : {
          "requires" : {
             "Test::CPAN::Meta" : "0",
-            "Test::MinimumVersion" : "0.10108",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
             "Test::Pod" : "1.41",
-            "Test::Spellunker" : "v0.0.16"
+            "Test::Spellunker" : "v0.2.7"
          }
       },
       "runtime" : {
@@ -48,7 +52,7 @@
             "LWP::UserAgent" : "0",
             "Module::Build" : "0",
             "Mouse" : "0.97",
-            "Net::Twitter::Lite" : "0.10004",
+            "Net::Twitter::Lite" : "0.12006",
             "Plack" : "0.9984",
             "Plack::Util" : "0",
             "URI" : "0",
@@ -67,18 +71,18 @@
    "provides" : {
       "Amon2::Auth" : {
          "file" : "lib/Amon2/Auth.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Amon2::Auth::Site::Facebook" : {
          "file" : "lib/Amon2/Auth/Site/Facebook.pm"
       },
       "Amon2::Auth::Site::Github" : {
          "file" : "lib/Amon2/Auth/Site/Github.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Amon2::Auth::Site::Loctouch" : {
          "file" : "lib/Amon2/Auth/Site/Loctouch.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Amon2::Auth::Site::Twitter" : {
          "file" : "lib/Amon2/Auth/Site/Twitter.pm"
@@ -88,7 +92,7 @@
       },
       "Amon2::Plugin::Web::Auth" : {
          "file" : "lib/Amon2/Plugin/Web/Auth.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -102,9 +106,11 @@
          "web" : "https://github.com/tokuhirom/Amon2-Auth"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_contributors" : [
       "Takumi Akiyama <t.akiym@gmail.com>",
-      "tokuhirom <tokuhirom@gmail.com>"
+      "Neil Bowers <neil@bowers.com>",
+      "Kenta Kase <kesin1202000@gmail.com>",
+      "Tokuhiro Matsuno <tokuhirom@gmail.com>"
    ]
 }
