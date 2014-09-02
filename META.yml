@@ -5,11 +5,9 @@ author:
 build_requires:
   Test::More: '0.96'
 configure_requires:
-  CPAN::Meta: '0'
-  CPAN::Meta::Prereqs: '0'
   Module::Build: '0.38'
 dynamic_config: 0
-generated_by: 'Minilla/v0.15.1, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Minilla/v2.1.1, CPAN::Meta::Converter version 2.141520'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -28,22 +26,22 @@ no_index:
 provides:
   Amon2::Auth:
     file: lib/Amon2/Auth.pm
-    version: '0.04'
+    version: '0.05'
   Amon2::Auth::Site::Facebook:
     file: lib/Amon2/Auth/Site/Facebook.pm
   Amon2::Auth::Site::Github:
     file: lib/Amon2/Auth/Site/Github.pm
-    version: '0.04'
+    version: '0.05'
   Amon2::Auth::Site::Loctouch:
     file: lib/Amon2/Auth/Site/Loctouch.pm
-    version: '0.04'
+    version: '0.05'
   Amon2::Auth::Site::Twitter:
     file: lib/Amon2/Auth/Site/Twitter.pm
   Amon2::Auth::Util:
     file: lib/Amon2/Auth/Util.pm
   Amon2::Plugin::Web::Auth:
     file: lib/Amon2/Plugin/Web/Auth.pm
-    version: '0.04'
+    version: '0.05'
 requires:
   Amon2: '3.03'
   Hash::MultiValue: '0.1'
@@ -65,9 +63,10 @@ resources:
   bugtracker: https://github.com/tokuhirom/Amon2-Auth/issues
   homepage: https://github.com/tokuhirom/Amon2-Auth
   repository: git://github.com/tokuhirom/Amon2-Auth.git
-version: '0.04'
+version: '0.05'
 x_contributors:
   - 'Takumi Akiyama <t.akiym@gmail.com>'
   - 'Neil Bowers <neil@bowers.com>'
   - 'Kenta Kase <kesin1202000@gmail.com>'
+  - 'Wataru TOYA <watrty@gmail.com>'
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
